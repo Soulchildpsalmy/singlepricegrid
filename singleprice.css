@@ -1,0 +1,170 @@
+html, body {
+    font-family: "Karla", serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(218, 22%, 67%);
+}
+
+.container {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    overflow: hidden; /* Ensures no content spills outside */
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 700px;
+    height: 60vh;
+    max-width: 90%;
+    margin: auto;
+}
+
+.top {
+    text-align: left;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+
+.top h1 {
+    color: hsl(179, 62%, 43%);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.top .guarantee {
+    color: hsl(71, 73%, 54%);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.top .description {
+    color: #7d8c93;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #00a9a5;
+    padding: 10px;
+    gap: 10px; /* Spacing between left and right sections */
+}
+
+.left, .right {
+    color: #ffffff;
+    padding: 15px;
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+    overflow: hidden; /* Prevents content from spilling */
+}
+
+.left {
+    background-color: #14a399;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    height: 35px;
+    text-align: left;
+}
+
+.amount {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.per-month {
+    font-weight: lighter;
+}
+
+.full-access {
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+.sign-up {
+    background-color: hsl(71, 73%, 54%);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%; /* Ensures button fits container */
+    height: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.sign-up:hover {
+    background-color: hsl(71, 63%, 44%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.right h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.list {
+    font-weight: lighter;
+    margin-top: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.right li {
+    margin-bottom: 8px;
+    word-wrap: break-word; /* Ensures text wraps within container */
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .bottom {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .top, .left, .right {
+        padding: 15px;
+    }
+
+    .sign-up {
+        width: 100%; /* Ensures responsiveness */
+    }
+}
+
+@media (max-height: 500px) {
+    .container {
+        height: auto;
+    }
+}
