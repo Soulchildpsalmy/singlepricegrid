@@ -10,27 +10,28 @@ html, body {
 
 .container {
     border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    overflow: hidden; /* Ensures no content spills outside */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Ensures no content is clipped */
     background-color: white;
     display: grid;
     grid-template-rows: 1fr 1fr;
     width: 700px;
-    height: 60vh;
-    max-width: 90%;
+    height: auto; /* Adjust height based on content */
+    max-width: 100%;
     margin: auto;
+    padding: 0; /* Remove extra padding */
 }
 
 .top {
     text-align: left;
     padding: 20px 30px;
     background-color: #ffffff;
-    margin-top: 30px;
+    margin-top: 0; /* Removed unnecessary margin */
 }
 
 .top h1 {
     color: hsl(179, 62%, 43%);
-    font-size: 24px;
+    font-size: 22px; /* Adjusted for better hierarchy */
     margin-bottom: 20px;
 }
 
@@ -43,7 +44,7 @@ html, body {
 .top .description {
     color: #7d8c93;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.4; /* Consistent line-height */
     margin-bottom: 15px;
     margin-top: 20px;
 }
@@ -53,14 +54,13 @@ html, body {
     grid-template-columns: 1fr 1fr;
     background-color: #00a9a5;
     padding: 10px;
-    gap: 10px; /* Spacing between left and right sections */
 }
 
 .left, .right {
     color: #ffffff;
     padding: 15px;
     box-sizing: border-box; /* Ensures padding doesn't cause overflow */
-    overflow: hidden; /* Prevents content from spilling */
+    flex: 1; /* Equal space for both sections */
 }
 
 .left {
@@ -86,16 +86,17 @@ html, body {
 }
 
 .amount {
-    font-size: 35px;
+    font-size: 28px; /* Adjusted for consistency */
     font-weight: bold;
 }
 
 .per-month {
     font-weight: lighter;
+    font-size: 12px; /* Smaller font size */
 }
 
 .full-access {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
@@ -107,12 +108,11 @@ html, body {
     font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
-    width: 90%; /* Ensures button fits container */
+    width: 100%; /* Ensures button fits container */
     height: 50px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    margin: 15px 0; /* Clean vertical spacing */
 }
 
 .sign-up:hover {
@@ -128,7 +128,7 @@ html, body {
 .list {
     font-weight: lighter;
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 12px; /* Adjusted font size */
     margin-bottom: 20px;
 }
 
